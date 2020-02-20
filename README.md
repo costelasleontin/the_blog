@@ -1,3 +1,5 @@
+This is a react web app which uses validator, redux, bootstrap and other npm packages to create an online blog page.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
