@@ -1,12 +1,16 @@
-export default (state = { filter: { type: "text", sort: "title" } }, action) => {
+// default store state for filter 
+const defaultFilterState={ type: "text", sort: "title" };
+
+//filter reducer export
+export default (filterstate = defaultFilterState, action) => {
     switch (action.type) {
         case "TITLESORT":
-            return { ...state, sort: "title" };
+            return { ...filterstate, sort: "title" };
         case "DATESORT":
-            return { ...state, sort: "date" };
+            return { ...filterstate, sort: "date" };
         case "AUTHORSORT":
-            return { ...state, sort: "author" };
+            return { ...filterstate, sort: "author" };
         default:
-            return state;
+            return filterstate;
     }
 }

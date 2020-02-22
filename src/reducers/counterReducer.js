@@ -1,13 +1,15 @@
-export default (state={counter:0},action)=>{
+
+//counter reducer export
+export default (counterstate = 0,action)=>{
     switch (action.type){
         case "ADD":
-            return { counter:state.counter+1};
+            return counterstate+1;
         case "SUBTRACT":
-            return {counter:state.counter-1}
+            return counterstate-1;
         case "RESET":
-            return {counter:0};
+            return 0;
         default:
-            return state;
+            return counterstate;
     }
 }
 
