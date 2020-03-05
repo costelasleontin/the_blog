@@ -2,6 +2,8 @@ This is a react web app which uses router, validator, redux, bootstrap and other
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This app is still in development and in the near future will include postgres database access, express api server , users secure cookie based authorization and also content filtering and pagination.
+
 This app is currentlly hosted on heroku at https://react-app-the-blog.herokuapp.com/home
 
 ## Available Scripts
