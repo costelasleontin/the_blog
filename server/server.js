@@ -9,11 +9,11 @@ const bcrypt = require('bcrypt');//could use cookie-parser signed cookies but it
 const database = require('knex')({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'Pascal@07',//credentials could be stored in an encrypted file in production
-        database: 'the_blog'
-    }
+            host: 'ec2-54-246-90-10.eu-west-1.compute.amazonaws.com',
+            user: 'evbjrguimzurya',
+            password: '5737c88e25f68736ad7a11fedb6d566ce92495d2b007504b5be80ebd710fecb5',//credentials could be stored in an encrypted file in production
+            database: 'dd1pfhneqt320j'
+        }
 });
 
 const app = express();
@@ -241,7 +241,7 @@ app.get("*",(req,res)=>{
 
 app.listen(port,()=>{console.log("The app has started")});
 
-//in production you use  the https module (down bellow) with certificate to use https connection with app but that also requires to switch all fetches from relative paths to absolute paths cause there isn't a way to use https
+//in production you use  the https module (down bellow) with certificate to use https connection with app but that also requires to switch all fetches from relative paths to absolute paths cause there isn't a way to use https also a certificate from a trusted authority costs money :)
 
 // https.createServer({
 //     key: fs.readFileSync(path.join(__dirname,'key.pem')),
