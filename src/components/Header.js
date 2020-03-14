@@ -1,37 +1,57 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link , Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {logedout} from '../actions/login.js';
 
-const Header = () => (
+const Header = (props) => {
+    const handleClick=(event)=>{
+        event.preventDefault();
+        props.dispatch(logedout());
+    }
+
+    const displayDash = (displayDashboard)=>{
+        if(displayDashboard)return(<li className="nav-item p-2"><Link to="/dashboard">Dashboard</Link></li>);
+    }
+
+    const redirectHome=()=>{
+        if(props.login===0&&window.location.pathname==="/dashboard"){
+            return (<Redirect to="/login"/>);
+        }
+    }
+
+    return(
     <header>
         <div className="container-fluid">
             {/*Site logo*/}
             <div className="row justify-content-center">
-                <div class="col-3">
-
+                <div className="col-3">
                 </div>
                 <div className="col-6 text-center">
-                    <a href="index.html">
+                    <Link to="/home">
                         {/*logo here*/}
                         <p className="logo">COSTELOS</p>
-                    </a>
+                    </Link>
                 </div>
                 <div className="col-3 align-self-end">
-                    <ul class="nav justify-content-end">
+                    <ul className="nav justify-content-end">
                         <li className="nav-item p-2">
-                            <a href="/Account/%23">Cart</a>
+                            <Link to="/Login">Sign In</Link>
                         </li>
                         <li className="nav-item p-2">
-                            <a href="/Login">Sign In</a>
+                            <Link to="/" onClick={handleClick.bind(this)}>Log Out</Link>
                         </li>
-                        <li className="nav-item p-2">
-                            <a href="/Account/Logout">Log Out</a>
-                        </li>
+                        {displayDash(props.login)}
+                        {redirectHome()}
                     </ul>
                 </div>
             </div>
         </div>
         <hr />
     </header>
-);
+);}
 
-export default Header;
+const mapStateToProps=(state)=>({
+    login:state.login
+});
+
+export default connect(mapStateToProps)(Header);

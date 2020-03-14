@@ -1,18 +1,14 @@
 import React, { Fragment } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from 'react-router-dom';
 import Navigation from './Navigation';
 import Header from './Header';
 import Newsletter from './Newsletter';
 import Media from './Media';
 import Footer from './Footer';
+import { connect } from 'react-redux';
 
 const About = () => (
     <Fragment>
         <div>
-            <script type="text/javascript">
-                $(document).ready(function () => $("input.input-validation-error").addClass("has-danger"););
-            </script>
             <div className="big-section">
 
                 {/*Top Header*/}
@@ -51,4 +47,8 @@ const About = () => (
     </Fragment>
 );
 
-export default About;
+const mapStateToProps=(state)=>({
+    login:state.login
+});
+
+export default connect(mapStateToProps)(About);

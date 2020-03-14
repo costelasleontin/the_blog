@@ -28,6 +28,8 @@ nav {
 }
 
 section {
+  border: 1px solid #dedede;
+  margin: 20px 0px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -40,9 +42,13 @@ section {
   opacity: 1;
 }
 
-  .presentation:hover, presentation:focus {
-      opacity: 0.5;
-  }
+#validation {
+  list-style-type: none;
+}
+
+.presentation:hover, presentation:focus {
+  opacity: 0.5;
+}
 
 .row {
   margin-left: -15px;

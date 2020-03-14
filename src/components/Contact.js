@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from 'react-router-dom';
 import Navigation from './Navigation';
 import Header from './Header';
 import Newsletter from './Newsletter';
@@ -10,9 +8,6 @@ import Footer from './Footer';
 const Contact = () => (
     <Fragment>
         <div>
-            <script type="text/javascript">
-                $(document).ready(function () => $("input.input-validation-error").addClass("has-danger"););
-            </script>
             <div className="big-section">
 
                 {/*Top Header*/}

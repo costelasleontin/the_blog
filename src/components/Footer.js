@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
     <Fragment>
@@ -7,13 +7,13 @@ const Footer = () => (
             <div className="container">
                 <ul className="nav justify-content-center">
                     <li className="nav-item">
-                        <a className="nav-link active" href="/contact">CONTACT</a>
+                        <Link className="nav-link active" to="/contact">CONTACT</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/Home/TermsOfService">TERMS OF SERVICE</a>
+                        <Link className="nav-link" to="/TermsOfService">TERMS OF SERVICE</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/Home/PrivacyPolicy">PRIVACY POLICY</a>
+                        <Link className="nav-link" to="/PrivacyPolicy">PRIVACY POLICY</Link>
                     </li>
                 </ul>
             </div>
