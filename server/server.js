@@ -1,6 +1,6 @@
 const path = require('path');
-const https = require('https');
-const fs = require('fs');
+// const https = require('https'); //no ssl certificate cause they cost money so no https :)
+// const fs = require('fs');
 const express = require('express');
 const cookieParser = require('cookie-parser');//could be eliminated in production if u store user token in state and not in cookie
 const {body, param, cookie, validationResult} = require('express-validator');
@@ -8,12 +8,12 @@ const moment = require('moment-timezone');
 const bcrypt = require('bcrypt');//could use cookie-parser signed cookies but it's better to be able to use custom hash algorithm
 const database = require('knex')({
     client: 'pg',
-    connection: {
-            host: 'ec2-54-246-90-10.eu-west-1.compute.amazonaws.com',
-            user: 'evbjrguimzurya',
-            password: '5737c88e25f68736ad7a11fedb6d566ce92495d2b007504b5be80ebd710fecb5',//credentials could be stored in an encrypted file in production
-            database: 'dd1pfhneqt320j'
-        }
+connection: {
+        host: '127.0.0.1',
+        user: 'postgres',
+        password: 'Secret123!',//credentials could be stored in an encrypted file in production
+        database: 'the_blog'
+    }
 });
 
 const app = express();
