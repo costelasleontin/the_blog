@@ -1,8 +1,12 @@
-This is a react web app which uses router, validator, redux, bootstrap and other npm packages to create an online blog page.
+This is a presentation react web app which uses router, validator, redux, bootstrap, express and other npm packages to create an online blog page.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This app is still in development and in the near future will include postgres database access, express api server , users secure cookie based authorization and also content filtering and pagination.
+This app is still in development and it includes postgres database access, express api server and  users secure cookie based authorization. In the future will implement content filtering and pagination,  pictures for articles and also an editing form with text formating on the article edit page and article adding page.
+
+The server could be setup to use https but a valid certificate from a thrusted authority costs money and using openssl certificate isn't a viable solution because you need to download certificate on every browser that uses the app.
+
+Some shortcuts have been taken in the code to make app development faster considering that it required almost 1 month to create it in my spare time.
 
 This app is currentlly hosted on heroku at https://react-app-the-blog.herokuapp.com/home
 
