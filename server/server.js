@@ -234,10 +234,10 @@ app.get("/posts", (req, res) => {
     }
 });
 
-//any other get requests should bring the user to homepage which is served from file
-// app.get("*",(req,res)=>{
-//     res.sendFile(path.join(buildPath,"index.html"));
-// });
+// any other get requests should bring the user to homepage which is served from file
+app.get("*",(req,res)=>{
+    res.sendFile(path.join(buildPath,"index.html"));
+});
 
 // app.listen(port,()=>{console.log("The app has started")});
 
