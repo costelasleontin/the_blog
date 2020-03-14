@@ -239,16 +239,16 @@ app.get("*",(req,res)=>{
     res.sendFile(path.join(buildPath,"index.html"));
 });
 
-// app.listen(port,()=>{console.log("The app has started")});
+app.listen(port,()=>{console.log("The app has started")});
 
 //in production you use  the https module (down bellow) with certificate to use https connection with app but that also requires to switch all fetches from relative paths to absolute paths cause there isn't a way to use https
 
-https.createServer({
-    key: fs.readFileSync(path.join(__dirname,'key.pem')),
-    cert: fs.readFileSync(path.join(__dirname,'cert.pem')),
-    passphrase: 'Secret123!'
-},app).listen(port,()=>{console.log("The app has started");
-})
+// https.createServer({
+//     key: fs.readFileSync(path.join(__dirname,'key.pem')),
+//     cert: fs.readFileSync(path.join(__dirname,'cert.pem')),
+//     passphrase: 'Secret123!'
+// },app).listen(port,()=>{console.log("The app has started");
+// })
 
 //utility methods
 //method for generating token
