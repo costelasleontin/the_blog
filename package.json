@@ -11,7 +11,7 @@
     "bootstrap": "^4.4.1",
     "cookie-parser": "^1.4.4",
     "express-validator": "^6.4.0",
-    "knex": "^0.20.10",
+    "knex": "^2.4.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
     "nodemon": "^2.0.2",
