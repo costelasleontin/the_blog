@@ -8,8 +8,6 @@ The server could be setup to use https but a valid certificate from a thrusted a
 
 Some shortcuts have been taken in the code to make app development faster considering that it required almost 1 month to create it in my spare time.
 
-This app is currentlly hosted on heroku at https://react-app-the-blog.herokuapp.com/home
-
 ## Available Scripts
 
 In the project directory, you can run:
